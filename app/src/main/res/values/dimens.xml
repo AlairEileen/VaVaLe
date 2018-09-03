@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textSize_Title">30sp</dimen>
+    <dimen name="margin_content">35dp</dimen>
+    <dimen name="margin_content_middle">10dp</dimen>
+    <dimen name="margin_control">15dp</dimen>
+    <dimen name="textSize_content">15sp</dimen>
+    <dimen name="textSize_content_button">16sp</dimen>
+    <dimen name="textSize_content_large">25sp</dimen>
+
+    <dimen name="textSize_Title_small">20sp</dimen>
+    <dimen name="height_title">50dp</dimen>
+    <dimen name="margin_title_small">20dp</dimen>
+    <dimen name="textSize_content_middle">12sp</dimen>
+    <dimen name="textSize_content_middle2">13sp</dimen>
+    <dimen name="margin_content_hor">25dp</dimen>
+    <dimen name="margin_control_middle">30dp</dimen>
+    <dimen name="height_control">30dp</dimen>
+    <dimen name="height_button">40dp</dimen>
+</resources>

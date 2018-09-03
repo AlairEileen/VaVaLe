@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="space.alair.vavale.HomeActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:gravity="center"
+        android:text="首页"
+        android:textColor="@color/theme_font"
+        android:textSize="@dimen/textSize_Title_small" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/theme_control_bg_black"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/tishi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  接收短信期间，请勿退出应用，否则将有可能收不到短信"
+            android:textColor="@color/theme_font"
+            android:textSize="@dimen/textSize_content_middle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_control"
+        android:layout_gravity="left"
+        android:layout_marginLeft="@dimen/margin_content_middle"
+        android:layout_marginTop="@dimen/margin_content_middle"
+        android:background="@drawable/round_title"
+        android:gravity="center_vertical"
+        android:onClick="onBalanceClick">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_content_middle"
+            android:layout_marginRight="@dimen/margin_content_middle"
+            android:src="@mipmap/jinbi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_content_middle"
+            android:text="金额"
+            android:textColor="@color/theme_font"
+            android:textSize="@dimen/textSize_content_middle" />
+
+        <TextView
+            android:id="@+id/tv_home_balance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_content_middle"
+            android:text="1000"
+            android:textColor="@color/theme_font"
+            android:textSize="@dimen/textSize_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_home_current_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_title_small"
+        android:layout_marginTop="@dimen/margin_title_small"
+        android:text="18612123234"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_content_large"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_home_project_phone_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_title_small"
+        android:gravity="center_horizontal|left"
+        android:paddingLeft="@dimen/margin_content"
+        android:paddingRight="@dimen/margin_content"
+        android:text="分开了进了房间仿佛见到了科技发达离开解放军俘虏看见分厘卡打扫房间就打发了军事对抗疗法卢卡斯的积分"
+        android:textColor="@color/theme_font_gray"
+        android:textSize="@dimen/textSize_content_middle"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_home_no_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="暂无手机号码"
+        android:textColor="@color/theme_font_gray"
+        android:textSize="25sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_home_number_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_content"
+        android:paddingRight="@dimen/margin_content"
+        android:text="手机号成功接收短信后会自动释放"
+        android:textColor="@color/theme_font_back"
+        android:textSize="@dimen/textSize_content_middle" />
+
+    <Button
+        android:id="@+id/btn_home_no_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:layout_marginLeft="@dimen/margin_content"
+        android:layout_marginRight="@dimen/margin_content"
+        android:background="@drawable/round_button"
+        android:onClick="onGetNewNumberAddProjectClick"
+        android:text="申请手机号"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSize_content" />
+
+    <LinearLayout
+        android:id="@+id/ll_home_has_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_button"
+        android:layout_marginTop="@dimen/margin_content_middle"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_content"
+        android:paddingRight="@dimen/margin_content"
+        android:visibility="gone"
+        android:weightSum="2">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:onClick="onGetNewNumberClick"
+            android:text="获取新号码"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_content" />
+
+        <LinearLayout
+            android:layout_width="15dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:onClick="onGetNewNumberAddProjectClick"
+            android:text="选择新项目"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_content" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_control"
+        android:paddingLeft="@dimen/margin_content"
+        android:text="最近使用"
+        android:textColor="@color/theme_font_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="@dimen/margin_content"
+        android:layout_marginRight="@dimen/margin_content"
+        android:layout_marginTop="@dimen/margin_content_middle"
+        android:background="@color/theme_line"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_control"
+        android:layout_marginLeft="@dimen/margin_content"
+        android:layout_marginRight="@dimen/margin_content"
+        android:layout_marginTop="@dimen/margin_content_middle"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_home_pre_phone_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btn_home_re_get"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/round_button"
+                android:paddingLeft="@dimen/margin_content_middle"
+                android:paddingRight="@dimen/margin_content_middle"
+                android:text="重新获取"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_content_middle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_home_project_phone_content2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_control"
+        android:gravity="center_horizontal|left"
+        android:paddingLeft="@dimen/margin_content"
+        android:paddingRight="@dimen/margin_content"
+        android:text=""
+        android:textColor="@color/theme_font_gray"
+        android:textSize="@dimen/textSize_content_middle" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="@dimen/margin_title_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/theme_control_bg_black"></LinearLayout>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:onClick="onMsgClick"
+            android:src="@mipmap/message" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/theme_control_bg_black"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_content"
+        android:paddingRight="@dimen/margin_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <TextView
+                android:id="@+id/tv_home_new_msg_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize_content" />
+
+            <TextView
+                android:id="@+id/tv_home_new_msg_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="right"
+                android:text=""
+                android:textColor="@color/theme_font_gray"
+                android:textSize="@dimen/textSize_content_middle" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_home_new_msg_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_content_middle"
+            android:text=""
+            android:textColor="@color/theme_font_gray"
+            android:textSize="@dimen/textSize_content_middle" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_pop_msg_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_title_black"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:id="@+id/pop_msg_close_wait"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:background="@drawable/round_pop"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_msg_close_wait_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text=""
+                android:textSize="@dimen/textSize_Title_small" />
+
+            <ProgressBar
+                android:id="@+id/pb_pop_msg_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:id="@+id/tv_pop_msg_close_pb_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_content_middle"
+                android:text="短信接收中..."
+                android:textSize="@dimen/textSize_Title_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pop_msg_close_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/margin_content"
+            android:layout_marginRight="@dimen/margin_content"
+            android:background="@drawable/round_pop"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/tv_pop_msg_close_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="18938289389"
+                android:textSize="@dimen/textSize_Title_small" />
+
+            <TextView
+                android:id="@+id/tv_pop_msg_close_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="34dp"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="@dimen/margin_content_middle"
+                android:paddingRight="@dimen/margin_content_middle"
+                android:text="分开了等级分类分级发可见度分厘卡电视机f'k'l'f'j'l's'k'd'f'l'k'f'j'd's'k'l'f"
+                android:textSize="@dimen/textSize_content" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_pop_msg_close_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_close"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

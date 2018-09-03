@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    tools:context="space.alair.vavale.MainActivity">
+
+    <data>
+
+        <variable
+            name="account"
+            type="space.alair.vavale.models.AccountModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:text="@string/app_name"
+                android:textColor="@color/theme_font"
+                android:textSize="@dimen/textSize_Title" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/margin_content_middle"
+                android:paddingLeft="@dimen/margin_content_middle"
+                android:paddingRight="@dimen/margin_content_middle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/name" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_content_middle"
+                    android:background="@null"
+                    android:hint="用户名"
+                    android:text="@={account.accountName}"
+                    android:textColor="@color/theme_font"
+                    android:textColorHint="@color/theme_font"
+                    android:textSize="@dimen/textSize_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:background="@color/theme_line"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:layout_marginTop="48dp"
+                android:gravity="bottom"
+                android:paddingBottom="@dimen/margin_content_middle"
+                android:paddingLeft="@dimen/margin_content_middle"
+                android:paddingRight="@dimen/margin_content_middle">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/password" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_content_middle"
+                    android:background="@null"
+                    android:hint="密码"
+                    android:text="@={account.accountPwd}"
+
+                    android:textColor="@color/theme_font"
+                    android:textColorHint="@color/theme_font"
+                    android:textSize="@dimen/textSize_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:background="@color/theme_line"></LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/round_button"
+                android:onClick="onLoginClick"
+                android:text="登录"
+                android:textColor="@color/theme_fg"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_content"
+                android:layout_marginRight="@dimen/margin_content"
+                android:layout_marginTop="@dimen/margin_content_middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="onSignUpClick"
+                    android:text="忘记密码？"
+                    android:textColor="@color/theme_font_back"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:onClick="onSignUpClick"
+                    android:text="申请账号"
+                    android:textColor="@color/theme_font_back"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

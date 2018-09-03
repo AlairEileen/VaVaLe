@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="space.alair.vavale.ProjectsActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <space.alair.vavale.view_tools.BackView
+            android:layout_width="@dimen/height_title"
+            android:layout_height="@dimen/height_title"
+            android:gravity="center"
+            app:src="@mipmap/arr_r" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_title"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="项目"
+            android:textColor="@color/theme_font"
+            android:textSize="@dimen/textSize_Title_small" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_title"
+        android:layout_marginLeft="@dimen/margin_content_middle"
+        android:layout_marginRight="@dimen/margin_content_middle"
+        android:layout_marginTop="@dimen/margin_control"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/round_container2"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:src="@mipmap/search" />
+
+        <EditText
+            android:id="@+id/et_projects_query"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="12dp"
+            android:background="@null"
+            android:maxLines="1"
+            android:hint="快速搜索项目"
+            android:imeOptions="actionSearch"
+            android:textColor="@color/white"
+            android:textColorHint="@color/theme_font"
+            android:textSize="@dimen/textSize_content_middle" />
+    </LinearLayout>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        app:popupTheme="@style/ToolbarPopupTheme"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:titleTextColor="@android:color/white" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="@dimen/margin_content_middle">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>
